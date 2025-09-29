@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VLSI Tool Command Reference (Cadence Tempus/Genus)</title>
+    <style>
+        :root {
+            --cadence-blue: #0A3D62;
+            --light-grey: #F5F5F5;
+            --dark-text: #333;
+            --command-bg: #E0E7FF;
+            --command-text: #1C3FAA;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-grey);
+            color: var(--dark-text);
+        }
+
+        header {
+            background-color: var(--cadence-blue);
+            color: white;
+            padding: 20px 40px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        
+        header p {
+            margin-top: 5px;
+            font-style: italic;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        .category-section {
+            background-color: white;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            padding: 20px;
+        }
+
+        .category-section h2 {
+            border-bottom: 3px solid var(--cadence-blue);
+            padding-bottom: 10px;
+            margin-top: 0;
+            color: var(--cadence-blue);
+            font-size: 1.5em;
+        }
+
+        .command-list {
+            list-style: none;
+            padding: 0;
+            margin: 15px 0 0 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+        }
+
+        .command-item {
+            background-color: var(--command-bg);
+            padding: 15px;
+            border-radius: 6px;
+            display: flex;
+            flex-direction: column;
+            border-left: 5px solid var(--cadence-blue);
+        }
+
+        .command-item strong {
+            font-family: 'Consolas', 'Courier New', monospace;
+            font-size: 1.1em;
+            color: var(--command-text);
+            margin-bottom: 5px;
+            word-break: break-word;
+        }
+
+        .command-item p {
+            font-size: 0.9em;
+            margin: 0;
+            color: var(--dark-text);
+            line-height: 1.4;
+        }
+        
+        .back-link {
+            display: block;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .back-link a {
+            padding: 10px 20px;
+            background-color: var(--cadence-blue);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>VLSI Tool Command Reference</h1>
+        <p>Comprehensive list of commands for a Cadence Timing/Physical Design Tool</p>
+    </header>
+
+    <div class="container">
+        
+        <div class="back-link">
+            <a href="README.html">← Back to Main Page</a>
+        </div>
+
+        <div class="category-section">
+            <h2>Analysis</h2>
+            <ul class="command-list">
+                <li class="command-item"><strong>::Imm::launch views module interconnection matrix</strong><p>Launch the views module interconnection matrix GUI.</p></li>
+                <li class="command-item"><strong>all_connected</strong><p>Reports the list of all connected objects of the specified object.</p></li>
+                <li class="command-item"><strong>check_design</strong><p>Reports information on design state.</p></li>
+                <li class="command-item"><strong>check_timing_intent</strong><p>Print a timing lint report.</p></li>
+                <li class="command-item"><strong>clock_ports</strong><p>Finds clock ports of the design.</p></li>
+                <li class="command-item"><strong>create_timing_bin</strong><p>Create a timing bin.</p></li>
+                <li class="command-item"><strong>fanin</strong><p>Traces fanin from a pin or port.</p></li>
+                <li class="command-item"><strong>fanout</strong><p>Traces fanout from a pin or port.</p></li>
+                <li class="command-item"><strong>report</strong><p>Generates one of various reports.</p></li>
+                <li class="command-item"><strong>report_constraint</strong><p>Print a constraint report.</p></li>
+                <li class="command-item"><strong>report_timing_summary</strong><p>Generate a timing report.</p></li>
+                <li class="command-item"><strong>time_info</strong><p>Report and track runtime and memory performance.</p></li>
+                <li class="command-item"><strong>validate_timing</strong><p>Generates a Tempus timing report.</p></li>
+            </ul>
+        </div>
+        
+        <div class="category-section">
+            <h2>Applets</h2>
+            <ul class="command-list">
+                <li class="command-item"><strong>applet</strong><p>Main command to install/manage/update 'applets'.</p></li>
+            </ul>
+        </div>
+        
+        <div class="category-section">
+            <h2>Attribute</h2>
+            <ul class="command-list">
+                <li class="command-item"><strong>report_obj</strong><p>Reports object's attribute information.</p></li>
+            </ul>
+        </div>
+        
+        <div class="category-section">
+            <h2>Constraint (Timing & Exceptions)</h2>
+            <ul class="command-list">
+                <li class="command-item"><strong>read_sdf</strong><p>Read annotated delays (SDF format).</p></li>
+                <li class="command-item"><strong>clock_uncertainty</strong><p>Specifies the uncertainty on the clock network.</p></li>
+                <li class="command-item"><strong>create_mode</strong><p>Create a new constraint mode.</p></li>
+                <li class="command-item"><strong>define_clock</strong><p>Defines and apply a clock waveform.</p></li>
+                <li class="command-item"><strong>define_cost_group</strong><p>Defines a new goal for timing optimization.</p></li>
+                <li class="command-item"><strong>derive_environment</strong><p>Derives the environment of an instance.</p></li>
+                <li class="command-item"><strong>external_delay</strong><p>Specifies delay that is outside the design.</p></li>
+                <li class="command-item"><strong>multi_cycle</strong><p>Overrides default clock edge selection.</p></li>
+                <li class="command-item"><strong>path_adjust</strong><p>Adjusts path constraints for timing analysis.</p></li>
+                <li class="command-item"><strong>path_delay</strong><p>Constrains certain paths for timing analysis.</p></li>
+                <li class="command-item"><strong>path_disable</strong><p>Disables timing analysis for certain paths.</p></li>
+                <li class="command-item"><strong>path_group</strong><p>Assigns certain paths to a cost group.</p></li>
+                <li class="command-item"><strong>reset_path_adjust</strong><p>Reset path adjust constraints for timing analysis.</p></li>
+                <li class="command-item"><strong>specify_paths</strong><p>Describes a set of timing paths for a timing exception or a report.</p></li>
+                <li class="command-item"><strong>create_base_cell_set</strong><p>Create base_cell set.</p></li>
+            </ul>
+        </div>
+
+        <div class="category-section">
+            <h2>Design Manipulation</h2>
+            <ul class="command-list">
+                <li class="command-item"><strong>create_inst</strong><p>Creates a new instance of a design, subdesign or libcell.</p></li>
+                <li class="command-item"><strong>insert_buffer</strong><p>Insert a buffer at given pin.</p></li>
+                <li class="command-item"><strong>ungroup</strong><p>Ungroups one or more instances.</p></li>
+                <li class="command-item"><strong>flatten_complex_ports</strong><p>Flatten complex ports of a (sub)design.</p></li>
+                <li class="command-item"><strong>connect</strong><p>Connects a list of pins/ports/subports to each other.</p></li>
+                <li class="command-item"><strong>change_names</strong><p>Change names of select objects.</p></li>
+                <li class="command-item"><strong>uniquify</strong><p>Eliminates sharing of subdesigns between instances.</p></li>
+                <li class="command-item"><strong>edit_netlist</strong><p>Edits a gate-level design.</p></li>
+                <li class="command-item"><strong>create_port</strong><p>Creates a new port on a design.</p></li>
+                <li class="command-item"><strong>create_primitive</strong><p>Creates a new unmapped logic primitive.</p></li>
+            </ul>
+        </div>
+        
+        <div class="category-section">
+            <h2>Design for Test (DFT)</h2>
+            <ul class="command-list">
+                <li class="command-item"><strong>replace_scan</strong><p>Replaces non-scan flops which pass DFT rules by their scan equivalent flops.</p></li>
+                <li class="command-item"><strong>connect_scan_chains</strong><p>Connects scan registers and segments into scan chains.</p></li>
+                <li class="command-item"><strong>insert_test_compression</strong><p>Inserts compression logic.</p></li>
+                <li class="command-item"><strong>check_dft_rules</strong><p>Checks for DFT rule violations.</p></li>
+                <li class="command-item"><strong>write_atpg</strong><p>Describes scan chains for ATPG interface.</p></li>
+                <li class="command-item"><strong>report_chains_total_wirelength</strong><p>Reports the total scan path wire-length.</p></li>
+                <li class="command-item"><strong>fix_dft_violations</strong><p>Fixes DFT rule violations.</p></li>
+                <li class="command-item"><strong>analyze_testability</strong><p>Performs ATPG analysis of the design.</p></li>
+            </ul>
+        </div>
+        
+        <div class="category-section">
+            <h2>Input and Output</h2>
+            <ul class="command-list">
+                <li class="command-item"><strong>read_db</strong><p>Read a netlist in internal database format.</p></li>
+                <li class="command-item"><strong>write_db</strong><p>Write a netlist in internal database format.</p></li>
+                <li class="command-item"><strong>read_hdl</strong><p>Reads in Verilog or VHDL files.</p></li>
+                <li class="command-item"><strong>read_sdc</strong><p>Reads in design constraints in SDC format.</p></li>
+                <li class="command-item"><strong>write_sdc</strong><p>Writes out design constraints in SDC format.</p></li>
+                <li class="command-item"><strong>write_netlist</strong><p>Writes out a design or a subdesign in Verilog.</p></li>
+                <li class="command-item"><strong>write_sdf</strong><p>Writes out delay information into a Standard Delay Format (SDF) file.</p></li>
+                <li class="command-item"><strong>read_def</strong><p>Reads in a DEF file (Physical).</p></li>
+                <li class="command-item"><strong>write_def</strong><p>Exports floorplan in DEF format (Physical).</p></li>
+            </ul>
+        </div>
+        
+        <div class="category-section">
+            <h2>Navigation</h2>
+            <ul class="command-list">
+                <li class="command-item"><strong>all_clocks</strong><p>Get all clocks.</p></li>
+                <li class="command-item"><strong>all_registers</strong><p>Get all registers.</p></li>
+                <li class="command-item"><strong>get_cells</strong><p>Get cells (instances).</p></li>
+                <li class="command-item"><strong>get_pins</strong><p>Get pins.</p></li>
+                <li class="command-item"><strong>current_design</strong><p>Get current design.</p></li>
+                <li class="command-item"><strong>set_top_module</strong><p>Changes to the new top module.</p></li>
+                <li class="command-item"><strong>fanin</strong><p>Traces fanin from a pin or port (also in Analysis).</p></li>
+            </ul>
+        </div>
+
+        <div class="category-section">
+            <h2>Timing (Core SDC & OCV)</h2>
+            <ul class="command-list">
+                <li class="command-item"><strong>create_clock</strong><p>Create clock (main SDC command).</p></li>
+                <li class="command-item"><strong>create_generated_clock</strong><p>Create generated clock.</p></li>
+                <li class="command-item"><strong>set_input_delay</strong><p>Set input delay (SDC constraint).</p></li>
+                <li class="command-item"><strong>set_output_delay</strong><p>Set output delay (SDC constraint).</p></li>
+                <li class="command-item"><strong>set_false_path</strong><p>Set false path (SDC exception).</p></li>
+                <li class="command-item"><strong>set_multicycle_path</strong><p>Set multicycle path (SDC exception).</p></li>
+                <li class="command-item"><strong>phys_enable_ocv</strong><p>Enables the SOCV and AOCV flows.</p></li>
+                <li class="command-item"><strong>set_case_analysis</strong><p>Set case analysis (for functional muxes/pins).</p></li>
+                <li class="command-item"><strong>set_timing_derate</strong><p>Set timing derate (for variation modeling).</p></li>
+            </ul>
+        </div>
+        
+        <div class="category-section">
+            <h2>Synthesis</h2>
+            <ul class="command-list">
+                <li class="command-item"><strong>elaborate</strong><p>Elaborates previously read HDL files.</p></li>
+                <li class="command-item"><strong>syn_generic</strong><p>Synthesizes the design to generic gates.</p></li>
+                <li class="command-item"><strong>syn_map</strong><p>Synthesizes the design to mapped gates.</p></li>
+                <li class="command-item"><strong>syn_opt</strong><p>Synthesizes the design to optimized gates.</p></li>
+                <li class="command-item"><strong>retime</strong><p>Retimes the design (moves registers across combinational logic).</p></li>
+                <li class="command-item"><strong>delete_buffer_tree</strong><p>Delete all the buffers and inverter pairs.</p></li>
+            </ul>
+        </div>
+
+        <div class="category-section">
+            <h2>Report (Specialized)</h2>
+            <ul class="command-list">
+                <li class="command-item"><strong>report_clock_tree_structure</strong><p>Report clock tree structure (Specific to this tool).</p></li>
+                <li class="command-item"><strong>report_logic_levels_histogram</strong><p>Provides the feature to get the logic level histogram.</p></li>
+                <li class="command-item"><strong>report_timing_derate</strong><p>Provides the feature to get the timing derate.</p></li>
+            </ul>
+        </div>
+        
+        <div class="back-link">
+            <a href="README.html">← Back to Main Page</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
